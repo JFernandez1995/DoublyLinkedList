@@ -71,9 +71,13 @@ public class DoublyLinkedList {
 
     public void printHead(){
 
-        System.out.println( header.getElement() );
+        System.out.println( header.getNext().getElement() );
     }
 
+    public void printTail(){
+
+        System.out.println( trailer.getPrev().getElement() );
+    }
 
 
     private void addBetween(int val, Node predecessor, Node successor){ //this private method is a helper function to add between successor and predecessor

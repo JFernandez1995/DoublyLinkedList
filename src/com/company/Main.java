@@ -17,9 +17,12 @@ public class Main {
 
 
 
-        System.out.println(DLL.size());
-        System.out.println(DLL.getFirst());
-        System.out.println(DLL.getLast());
+        System.out.println(DLL.size()); //get size
+        System.out.println(DLL.getFirst()); //get first element
+        System.out.println(DLL.getLast());  //get last element
+        DLL.printHead();    //should print out 1
+        DLL.printTail();    //should print out 8
+
 
 
     }
