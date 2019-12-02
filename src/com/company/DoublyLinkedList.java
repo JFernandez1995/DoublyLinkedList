@@ -101,5 +101,39 @@ public class DoublyLinkedList {
 
     }
 
+    public boolean equals(Object o){
+
+        if(o == null){return false;}    //if the object is empty
+        if(getClass() != o.getClass()){return false;}
+
+        DoublyLinkedList other =(DoublyLinkedList) o; //use the non parameterized type
+        if(size != other.size){
+            return false;
+        }
+
+        Node walkA = header.getNext();
+        Node walkB = other.header.getNext();
+
+        Node walkC = trailer.getPrev();
+        Node walkD = other .trailer.getPrev();
+
+
+        for (int i = 0; i<size;i++){
+            if (walkA.getElement() != walkB.getElement()){ return false;}
+            walkA = walkA.getNext();    //iterate to next node
+            walkB = walkB.getNext();    //iterate to next node
+
+            }
+
+        for (int i = 0; i<size;i++){
+            if (walkC.getElement() != walkD.getElement()){ return false;}
+            walkC = walkC.getPrev();    //iterate to next node
+            walkD = walkD.getPrev();    //iterate to next node
+
+        }
+
+        return true;
+    }
+
 
 }

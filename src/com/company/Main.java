@@ -25,6 +25,24 @@ public class Main {
         DLL.printHead();    //should print out 5
         DLL.printTail();    //should print out 9
 
+        DoublyLinkedList DLL_compare1 =new DoublyLinkedList();
+        DoublyLinkedList DLL_compare2 =new DoublyLinkedList();
+
+        DLL_compare1.addFirst( 1 );
+        DLL_compare1.addFirst( 2 );
+        DLL_compare1.addFirst( 3 );
+        DLL_compare1.addLast( 8 );
+
+
+        DLL_compare2.addFirst( 1 );
+        DLL_compare2.addFirst( 2 );
+        DLL_compare2.addFirst( 3 );
+        DLL_compare2.addLast( 8);
+       // DLL_compare2.addLast( 0);     //uncomment for false output
+
+
+        System.out.println( DLL_compare1.equals( DLL_compare2 ) );
+
 
 
 
