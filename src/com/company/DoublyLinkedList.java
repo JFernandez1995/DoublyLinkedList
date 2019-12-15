@@ -135,5 +135,29 @@ public class DoublyLinkedList {
         return true;
     }
 
+    public DoublyLinkedList clone() throws CloneNotSupportedException{
+
+        DoublyLinkedList other =(DoublyLinkedList)super.clone();
+
+        if (size>0){
+            other.header = new Node( header.getElement(),null, null);
+            Node walk = header.getNext();
+            Node otherTail = other.header;
+
+            while(walk != null){
+
+                Node newest = new Node(walk.getElement(),null,null );
+                otherTail.setNext(newest);
+                otherTail=newest;
+                walk=walk.getNext();
+            }
+
+        }
+
+
+
+
+        return other;
+    }
 
 }
